@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError
 from typing import Optional
 
 
-HEADERS = {"User-Agent": "StudyAssistant/1.0 (educational project)"}
+HEADERS = {"User-Agent": "SabaqCoach/1.0 (educational project)"}
 TIMEOUT = 8
 
 

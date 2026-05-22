@@ -55,7 +55,16 @@
       "Bash(vercel whoami *)",
       "Bash(railway login *)",
       "Read(//tmp/**)",
-      "Bash(jobs -l)"
+      "Bash(jobs -l)",
+      "Bash(python3 -c \"import sys,json; runs=json.load\\(sys.stdin\\).get\\('workflow_runs',[]\\); r=runs[0] if runs else {}; print\\(r.get\\('status','none'\\), r.get\\('conclusion',''\\), r.get\\('html_url',''\\)\\)\")",
+      "Bash(git commit *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"import nacl; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import sys,json; r=json.load\\(sys.stdin\\)['workflow_runs'][0]; print\\(r['status'], r['conclusion'] or 'in progress', r['html_url']\\)\")",
+      "Bash(sed -i '' 's|https://abzaluly.github.io/study-assistant|https://abzaluly.github.io/sabaq-coach|g' frontend/.env.production)",
+      "Bash(sed -i '' 's|https://abzaluly.github.io|https://abzaluly.github.io|g' render.yaml)",
+      "Bash(echo \"Remote updated: $\\(git remote get-url origin\\)\")"
     ]
   }
 }

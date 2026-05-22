@@ -20,7 +20,7 @@ struct LoginView: View {
                             .foregroundStyle(Color(hex: "#7c3aed"))
                             .padding(.top, 60)
 
-                        Text("Study Assistant")
+                        Text("Sabaq Coach")
                             .font(.largeTitle.bold())
                             .foregroundColor(.white)
 

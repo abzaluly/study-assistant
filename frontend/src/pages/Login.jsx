@@ -44,7 +44,7 @@ export default function Login() {
       <div className="auth-left">
         <span className="animate-in s1" style={{ fontSize: 72, marginBottom: 20, display: 'block' }}>📚</span>
         <h1 className="grad animate-in s2" style={{ fontSize: 48, fontWeight: 800, marginBottom: 12, letterSpacing: -1 }}>
-          Study Assistant
+          Sabaq Coach
         </h1>
         <p className="animate-in s3" style={{ color: 'rgba(255,255,255,.5)', fontSize: 20, marginBottom: 48 }}>
           AI-платформа для студентов Казахстана

@@ -59,14 +59,14 @@ export default function Register() {
       <div className="auth-left">
         <span className="animate-in s1" style={{ fontSize: 72, marginBottom: 20, display: 'block' }}>📚</span>
         <h1 className="grad animate-in s2" style={{ fontSize: 48, fontWeight: 800, marginBottom: 12, letterSpacing: -1 }}>
-          Study Assistant
+          Sabaq Coach
         </h1>
         <p className="animate-in s3" style={{ color: 'rgba(255,255,255,.5)', fontSize: 20, marginBottom: 48 }}>
           Начни учиться умнее уже сегодня
         </p>
 
         <div className="card animate-in s4" style={{ marginBottom: 28, maxWidth: 420 }}>
-          <p style={{ fontWeight: 700, fontSize: 15, marginBottom: 10 }}>Почему Study Assistant?</p>
+          <p style={{ fontWeight: 700, fontSize: 15, marginBottom: 10 }}>Почему Sabaq Coach?</p>
           <p style={{ color: 'rgba(255,255,255,.6)', fontSize: 14, lineHeight: 1.65 }}>
             Наш AI анализирует твои конспекты, находит пробелы в знаниях
             и генерирует персонализированные тесты — всё в одном приложении.

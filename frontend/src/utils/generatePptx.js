@@ -199,7 +199,7 @@ function slideFinal(prs, interest, entities) {
   })
 
   sld.addShape('roundRect', { x: 2.5, y: 4.18, w: 5, h: 0.56, fill: { color: C.purple, transparency: 45 }, line: { color: C.purpleL, transparency: 20 }, rectRadius: 0.15 })
-  txt(sld, '🤖 Сгенерировано AI Study Assistant', 2.5, 4.18, 5, 0.56, { fontSize: 13, color: C.purpleL, align: 'center' })
+  txt(sld, '🤖 Сгенерировано Sabaq Coach', 2.5, 4.18, 5, 0.56, { fontSize: 13, color: C.purpleL, align: 'center' })
 }
 
 // ── Main export ────────────────────────────────────────────────────────────
@@ -207,7 +207,7 @@ function slideFinal(prs, interest, entities) {
 export async function buildPptx(slidesData, interest, lectureTitle, entities = [], style = '') {
   const prs = new PptxGenJS()
   prs.layout  = 'LAYOUT_WIDE'
-  prs.author  = 'AI Study Assistant'
+  prs.author  = 'Sabaq Coach'
   prs.title   = lectureTitle || 'Разбор слабых тем'
   prs.subject = 'Персональный разбор пробелов'
 

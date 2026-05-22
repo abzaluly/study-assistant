@@ -19,7 +19,7 @@ with engine.connect() as _conn:
         except Exception:
             pass
 
-app = FastAPI(title="Study Assistant API")
+app = FastAPI(title="Sabaq Coach API")
 
 from app.config import settings as _settings
 
@@ -47,4 +47,4 @@ app.include_router(progress.router, prefix="/api/progress", tags=["progress"])
 
 @app.get("/")
 def root():
-    return {"message": "Study Assistant API is running"}
+    return {"message": "Sabaq Coach API is running"}
