@@ -40,7 +40,22 @@
       "Bash(xargs kill -9)",
       "Bash(git -C \"/Users/alishka/Documents/Alishka/Ali private/Diploma Bachelor 2025-2026/study-assistant\" status)",
       "Bash(git rm *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh --version)",
+      "Bash(railway --version)",
+      "Bash(vercel --version)",
+      "Bash(brew install *)",
+      "Bash(gh auth *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('login','ERROR'\\), d.get\\('message',''\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('html_url', d.get\\('message',''\\)\\)\\)\")",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(RAILWAY_TOKEN=7d2124aa-14d4-4fc9-971e-e1451457d1d0 railway whoami *)",
+      "Bash(vercel whoami *)",
+      "Bash(railway login *)",
+      "Read(//tmp/**)",
+      "Bash(jobs -l)"
     ]
   }
 }
