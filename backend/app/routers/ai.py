@@ -254,6 +254,15 @@ def analyze_notes(data: AnalyzeRequest, db: Session = Depends(get_db)):
     return result
 
 
+@router.get("/debug")
+def debug_endpoint():
+    import traceback
+    try:
+        test = client.models.list()
+        return {"openai": "ok", "models": str(test)[:100]}
+    except Exception as e:
+        return {"openai_error": str(e), "trace": traceback.format_exc()[-500:]}
+
 @router.post("/explain")
 def explain_topic(data: ExplainRequest, db: Session = Depends(get_db)):
     try:
