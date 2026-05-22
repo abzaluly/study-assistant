@@ -1,0 +1,1 @@
+from app.routers import auth, subjects, lectures, materials, ai, quizzes, progress

@@ -1,0 +1,20 @@
+# Python
+backend/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+backend/*.db
+backend/uploads/
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# iOS
+ios/StudyAssistant.xcodeproj/xcuserdata/
+ios/DerivedData/
+*.xcworkspace/xcuserdata/
+
+# OS
+.DS_Store
