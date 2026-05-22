@@ -256,13 +256,16 @@ def analyze_notes(data: AnalyzeRequest, db: Session = Depends(get_db)):
 
 @router.post("/explain")
 def explain_topic(data: ExplainRequest, db: Session = Depends(get_db)):
-    materials = db.query(Material).filter(
-        Material.lecture_id == data.lecture_id,
-        Material.source_label == "lecture"
-    ).all()
-    lecture_text = " ".join([m.extracted_text or "" for m in materials])
+    try:
+        materials = db.query(Material).filter(
+            Material.lecture_id == data.lecture_id,
+            Material.source_label == "lecture"
+        ).all()
+        lecture_text = " ".join([m.extracted_text or "" for m in materials])
 
-    ctx = build_student_context(data.user_id, data.lecture_id, data.interests or [], db)
+        ctx = build_student_context(data.user_id, data.lecture_id, data.interests or [], db)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"DB error: {str(e)}")
 
     system_prompt = f"""Ты — адаптивный AI-репетитор для студентов Казахстана.
 
@@ -291,12 +294,15 @@ def explain_topic(data: ExplainRequest, db: Session = Depends(get_db)):
         messages.append({"role": msg["role"], "content": msg["content"]})
     messages.append({"role": "user", "content": data.question})
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=messages,
-        max_tokens=2000, temperature=0.7,
-    )
-    answer = response.choices[0].message.content
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages,
+            max_tokens=2000, temperature=0.7,
+        )
+        answer = response.choices[0].message.content
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"OpenAI error: {str(e)}")
 
     svg = None
     try:
